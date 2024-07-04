@@ -38,8 +38,17 @@ export class RegisterComponent implements OnInit {
     confirm_password: this.confirm_password,
     phone_number: this.phone_number,
   });
+  showAlert = false;
+  alertMessage = 'Your Account are creating';
+  alertColor = 'blue';
 
   ngOnInit(): void {
     console.log(this.name);
+  }
+
+  register() {
+    this.showAlert = true;
+    this.alertMessage = 'Your Account are creating';
+    this.alertColor = 'blue';
   }
 }
