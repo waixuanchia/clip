@@ -25,4 +25,10 @@
   </p>
   <p class="text-red-400" *ngIf="control.errors?.['min']">Value is too low</p>
   <p class="text-red-400" *ngIf="control.errors?.['max']">Value is too high</p>
+  <p class="text-red-400" *ngIf="control.errors?.['controlNotMatch']">
+    Password should match with confirm password
+  </p>
+  <p class="text-red-400" *ngIf="control.errors?.['emailExists']">
+    The email is already exists
+  </p>
 </ng-container>
