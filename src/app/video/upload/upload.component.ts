@@ -94,6 +94,7 @@ export class UploadComponent implements OnDestroy {
       this.selectedScreenshot
     );
     const screenshotPath = `/screenshots/${filename}.png`;
+
     this.screenshotTask = this.storage.upload(screenshotPath, screenshotBlob);
 
     this.task = this.storage.upload(filePath, this.file);

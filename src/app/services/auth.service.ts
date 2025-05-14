@@ -69,9 +69,7 @@ export class AuthService {
   }
 
   public async signIn(email: string, password: string) {
-    try {
-      await this.auth.signInWithEmailAndPassword(email, password);
-    } catch (err) {}
+    return await this.auth.signInWithEmailAndPassword(email, password);
   }
 
   public async logout($event?: Event) {

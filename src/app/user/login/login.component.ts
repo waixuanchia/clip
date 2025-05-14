@@ -20,7 +20,11 @@ export class LoginComponent {
   async login() {
     this.isSubmitting = true;
     try {
-      this.auth.signIn(this.credentials.email, this.credentials.password);
+      const credentials = this.auth.signIn(
+        this.credentials.email,
+        this.credentials.password
+      );
+      await credentials;
 
       this.showAlert = true;
       this.alertColor = 'green';
@@ -29,7 +33,7 @@ export class LoginComponent {
     } catch (err) {
       this.showAlert = true;
       this.alertColor = 'red';
-      this.alertMessage = 'Unexpected error occur';
+      this.alertMessage = (err as Error).message;
       this.isSubmitting = false;
     }
   }
