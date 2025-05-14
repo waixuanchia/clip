@@ -14,8 +14,5 @@ export class InputComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  inputEvent() {
-    console.log(this.control);
-    console.log(this.control.dirty);
-  }
+  inputEvent() {}
 }
